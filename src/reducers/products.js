@@ -1,4 +1,4 @@
-import { SHOW_BOOKS } from '../actions'
+import { SHOW_BOOKS } from '../actions';
 
 const initialState = {
 	list: []

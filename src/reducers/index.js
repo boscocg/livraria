@@ -4,7 +4,7 @@ import { updateCart } from './cart';
 
 const rootReducer = combineReducers({
 	books: showBooks,
-	cart: updateCart,
+	cart: updateCart
 });
 
 export default rootReducer;

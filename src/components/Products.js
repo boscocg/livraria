@@ -6,10 +6,21 @@ import BtnAddToCart from './BtnAddToCart';
 
 class Products extends Component {
 
+	constructor(props) {
+	    super(props);
+	    this.state = {
+			cart: this.props.cart
+	    };
+  	}
+
 	componentWillMount() {
 		this.props.showBooks();
 		this.props.updateCart();
 	}
+
+	componentDidUpdate() {
+		console.log("componentDidUpdate")
+  	}
 
 	renderBooksList() {
 		return this.props.books.map((book) => {
@@ -25,7 +36,7 @@ class Products extends Component {
 	render() {
 	    return (
 	      <div>
-	      	<h1>App Produtos - <IconCart /></h1>
+	      	<h1>App Produtos - <IconCart totalItems={this.state.cart.length} /></h1>
 	      	<ul>
 				{ this.renderBooksList() }
 	      	</ul>
@@ -35,7 +46,6 @@ class Products extends Component {
 }
 
 function mapStateToProps(state) {
-	console.log("MONITOR:", state)
 	return {
 		books: state.books.list,
 		cart: state.cart.list,

@@ -14,19 +14,8 @@ export function showBooks() {
 
 export const UPDATE_CART = 'UPDATE_CART';
 
-export function updateCart(items) {
+export function updateCart() {
 	return { 
-		type: UPDATE_CART, 
-		payload: []
-	}
-}
-
-
-export const TOTAL_ITEMS_IN_CART = 'TOTAL_ITEMS_IN_CART';
-
-export function totalItemsInCart(total) {
-	return { 
-		type: UPDATE_CART, 
-		payload: []
+		type: UPDATE_CART
 	}
 }

@@ -13,17 +13,12 @@ class Cart extends Component {
 			return (
 				<li key={item.id}>
 					<span>{item.title}</span>
-					<span>{item.price}</span>
-					<a href="#" onClick={() => this.removeFromCart(book)}>X</a>
+					<span> {item.price}</span>
+					<span> Quantidade: {item.number}</span>
+					<a href="#" onClick={() => this.removeFromCart(book)}> X</a>
 				</li>
 			)
 		})
-	}
-
-	removeFromCart(book) {
-		let cart = this.props.cart;
-		cart = cart.push(book)
-		this.props.updateCart(cart);
 	}
 
 	render() {

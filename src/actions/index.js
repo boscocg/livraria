@@ -12,12 +12,21 @@ export function showBooks() {
 }
 
 
-export const ADD_TO_CART = 'ADD_TO_CART';
+export const UPDATE_CART = 'UPDATE_CART';
 
-export function addToCart(items) {
-	console.log(items)
+export function updateCart(items) {
 	return { 
-		type: ADD_TO_CART, 
+		type: UPDATE_CART, 
+		payload: []
+	}
+}
+
+
+export const TOTAL_ITEMS_IN_CART = 'TOTAL_ITEMS_IN_CART';
+
+export function totalItemsInCart(total) {
+	return { 
+		type: UPDATE_CART, 
 		payload: []
 	}
 }

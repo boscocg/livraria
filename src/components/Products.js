@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { showBooks, addToCart } from '../actions';
+import { showBooks, updateCart } from '../actions';
+import IconCart from './IconCart';
+import BtnAddToCart from './BtnAddToCart';
 
 class Products extends Component {
-	constructor(props) {
-	    super(props);
-	}
 
 	componentWillMount() {
 		this.props.showBooks();
-		this.props.addToCart();
+		this.props.updateCart();
 	}
 
 	renderBooksList() {
@@ -17,22 +16,16 @@ class Products extends Component {
 			return (
 				<li key={book.id}>
 					<h3>{book.title}</h3>
-					<a href="#" onClick={() => this.addToCart(book)}>Adicionar ao carrinho</a>
+					<BtnAddToCart book={book} />
 				</li>
 			)
 		})
 	}
 
-	addToCart(book) {
-		let cart = this.props.cart;
-		cart = cart.push(book)
-		this.props.addToCart(cart);
-	}
-
 	render() {
 	    return (
 	      <div>
-	      	<h1>App Produtos</h1>
+	      	<h1>App Produtos - <IconCart /></h1>
 	      	<ul>
 				{ this.renderBooksList() }
 	      	</ul>
@@ -49,4 +42,4 @@ function mapStateToProps(state) {
 	}
 }
 
-export default connect(mapStateToProps, { showBooks, addToCart })(Products)
+export default connect(mapStateToProps, { showBooks, updateCart })(Products)

@@ -1,7 +1,4 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { showBooks } from '../actions';
-import { Link, IndexLink } from 'react-router';
+import React from 'react';
 import Products from '../components/Products';
 
 export default class Home extends React.Component {
@@ -11,4 +8,3 @@ export default class Home extends React.Component {
 		)
 	}
 }
-

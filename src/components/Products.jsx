@@ -1,31 +1,35 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { showBooks, updateCart } from '../actions';
-import IconCart from './IconCart';
-import BtnAddToCart from './BtnAddToCart';
+import IconCart from './IconCart.jsx';
+import BtnAddToCart from './BtnAddToCart.jsx';
 
 class Products extends Component {
-
-	constructor(props) {
-	    super(props);
-	    this.state = {
-			cart: this.props.cart
-	    };
-  	}
 
 	componentWillMount() {
 		this.props.showBooks();
 		this.props.updateCart();
 	}
 
-	componentDidUpdate() {
-		console.log("componentDidUpdate")
-  	}
+	verifyItemIfExists(book) {
+		if (this.props.cart.length == 1 && this.props.cart[0].id == book.id) {
+			if(this.props.cart[0].number > 0)
+				return true;
+		}
+		else {
+			for (var i = 0, len = this.props.cart.length; i < len; i++) {
+				if (this.props.cart[i].id == book.id) {
+					if(this.props.cart[i].number > 0)
+						return true;
+				}
+			}
+		}	
+	}
 
 	renderBooksList() {
 		return this.props.books.map((book) => {
 			return (
-				<li key={book.id}>
+				<li key={book.id} className={this.verifyItemIfExists(book) ? 'inCart' : 'outCart'}>
 					<h3>{book.title}</h3>
 					<BtnAddToCart book={book} />
 				</li>
@@ -36,7 +40,7 @@ class Products extends Component {
 	render() {
 	    return (
 	      <div>
-	      	<h1>App Produtos - <IconCart totalItems={this.state.cart.length} /></h1>
+	      	<h1>App Produtos - {this.props.cart.length}</h1>
 	      	<ul>
 				{ this.renderBooksList() }
 	      	</ul>
@@ -46,6 +50,7 @@ class Products extends Component {
 }
 
 function mapStateToProps(state) {
+	console.log("monitor prod",state)
 	return {
 		books: state.books.list,
 		cart: state.cart.list,

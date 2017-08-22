@@ -1,0 +1,28 @@
+@import "Mixins.less";
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, font, img, form, label, table {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	text-rendering: optimizeLegibility;
+	font-family: "Segoe UI",sans-serif;
+}
+html, body,body > .container {
+	height: 100%;
+}
+body {
+	font-size: 13px;
+	color: #333;
+}
+img {
+	border:0;
+}
+img, a, a:hover {
+	text-decoration:none;
+}
+*:focus {
+	outline:0!important;
+}
+* {
+	.customScroll();
+}

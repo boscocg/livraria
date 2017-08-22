@@ -1,4 +1,9 @@
+var debug = process.env.NODE_ENV !== "production";
+var webpack = require('webpack');
+
 module.exports = {
+  context: __dirname,
+  devtool: debug ? "inline-sourcemap" : null,
   entry: [
     './src/index.js'
   ],
@@ -14,19 +19,32 @@ module.exports = {
       query: {
         presets: ['react', 'es2015', 'stage-1']
       }
-    }],
-    rules: [{
-        test: /\.less$/,
-        exclude: /node_modules/,
-        use: [{
-            loader: "style-loader" // creates style nodes from JS strings
-        }, {
-            loader: "css-loader" // translates CSS into CommonJS
-        }, {
-            loader: "less-loader" // compiles Less to CSS
-        }]
-    }]
+    },
+    {
+      test: /\.css$/,
+      exclude: /node_modules/,
+      loader: 'style!css'
+    },
+    {
+      test: /\.scss$/,
+      exclude: /node_modules/,
+      loader: 'style!css!sass'
+    },
+    {
+      test: /\.less$/,
+      exclude: /node_modules/,
+      loader: "style!css!less"
+    },
+    {
+      test: /\.(jpg|png|gif|svg)$/,
+      include: /images/,
+      loader: 'url'
+    }
+    ],
   },
+  plugins: debug ? [] : [
+    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+  ],
   resolve: {
     extensions: ['', '.js', '.jsx']
   },

@@ -34,7 +34,6 @@ class Cart extends Component {
 }
 
 function mapStateToProps(state) {
-	console.log("CART MONITOR:", state)
 	return {
 		cart: state.cart.list,
 	}

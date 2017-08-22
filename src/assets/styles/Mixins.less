@@ -1,0 +1,43 @@
+.transition(@time: 0.3s, @propriedade: all, @delay: 0s) {
+    -webkit-transition: @propriedade @time cubic-bezier(.48,.5,.15,1) @delay;
+    -moz-transition: @propriedade @time cubic-bezier(.48,.5,.15,1) @delay;
+    -o-transition: @propriedade @time cubic-bezier(.48,.5,.15,1) @delay;
+    -ms-transition: @propriedade @time cubic-bezier(.48,.5,.15,1) @delay;
+    transition: @propriedade @time cubic-bezier(.48,.5,.15,1) @delay;
+}
+
+.transformRotate(@degraus: 45deg) {
+    -ms-transform: rotate(@degraus);
+    -webkit-transform: rotate(@degraus);
+    transform: rotate(@degraus);
+}
+
+.arrow(@bgcolor: #333) {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: none @bgcolor;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    margin-left: -5px;
+    border-left: 1px solid #bbb;
+    border-top: 1px solid #bbb;
+    .transform();
+}
+
+.customScroll() {
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #ddd;
+        border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #666;
+        border-radius: 20px;
+    }
+}

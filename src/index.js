@@ -7,9 +7,9 @@ import { Router, Route, IndexRoute,hashHistory } from 'react-router';
 import reducers from './reducers';
 import thunk from 'redux-thunk'
 
-import MasterApp from './pages/MasterApp';
-import Home from './pages/Home';
-import CartPage from './pages/CartPage';
+import MasterApp from './pages/MasterApp.jsx';
+import Home from './pages/Home.jsx';
+import CartPage from './pages/CartPage.jsx';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 

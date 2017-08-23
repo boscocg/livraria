@@ -9,6 +9,7 @@
 
 	& img {
 		width: 100%;
+		.transition();
 	}
 
 	& span {
@@ -25,5 +26,18 @@
 		box-sizing: border-box;
 		text-align: center;
 		box-shadow: inset rgba(0,0,0,0.2) 1px 2px 6px;
+		.transition();
+	}
+
+	&:hover {
+		img {
+			width: 105%;
+			position: relative;
+		}
+		span {
+			-webkit-transform: rotateY(45deg);
+		    transform: rotateY(45deg);
+		}
 	}
 }
+

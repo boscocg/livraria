@@ -1,6 +1,7 @@
 import { UPDATE_CART } from '../actions';
 import { REMOVE_FROM_CART } from '../actions';
 import { DECREASE_QUANT_FROM_CART } from '../actions';
+import { addItemInList, calcTotal, removeItemFromCart, decreaseItemFromCart } from './cartFunctions';
 
 const initialState = {
 	list: [],
@@ -8,104 +9,27 @@ const initialState = {
 
 export function updateCart(state = initialState, action) {
 
-	const newState = Object.assign({}, state);
+	let newState = Object.assign({}, state, {total: 0});
 
-	if (action.item == undefined)
-		action.item = ""
+	if (action.item == undefined || action.item == "")
+		return Object.assign({}, newState, action)
+		
 
 	switch(action.type) {
 
 		case UPDATE_CART:
-			if (action.item != "") {
-				
-				if (action.item.number == undefined)
-					action.item.number = 1;
-
-				if (newState.list.length > 0) {
-					if (newState.list.length == 1 && newState.list[0].id != action.item.id) {
-						action.item.number = 1;
-						newState.list.push(action.item);
-					}
-					else {
-						let equalBooksInCart = 0;
-						let indexForRemove = 0;
-						for (var i = 0, len = newState.list.length; i < len; i++) {
-							if (newState.list[i].id == action.item.id) {
-								equalBooksInCart = newState.list[i].number;
-								equalBooksInCart += 1;
-								indexForRemove = i;
-							}
-						}
-						if (equalBooksInCart == 0) {
-							action.item.number = 1;
-							newState.list.push(action.item);
-						}
-						else if (equalBooksInCart > 0) {
-							action.item.number = equalBooksInCart;
-							newState.list.splice(indexForRemove,1);
-							newState.list.push(action.item);
-						}
-					}	
-				}
-				else {
-					newState.list.push(action.item);
-				}
-			}
-			return Object.assign({}, state, newState);
-
+			newState = addItemInList(newState, action);//Update Item in list	
+			newState.total = calcTotal(newState.list);//Calc price total
+			return Object.assign({}, newState, action);
 
 		case REMOVE_FROM_CART:
-			if (action.item != "") {
-				if (state.list.length > 0) {
-					if (state.list.length == 1) {
-						if (state.list[0].id == action.item.id)
-							state.list.splice(0, 1);
-					}
-					else {
-						let indexForRemove = 0;
-						for (var i = 0, len = state.list.length; i < len; i++) {
-							if (state.list[i].id == action.item.id) {
-								indexForRemove = i;
-							}
-						}
-						state.list.splice(indexForRemove,1);
-					}	
-				}
-			}
+			newState = removeItemFromCart(newState, action);//Remove Item from list	
+			newState.total = calcTotal(newState.list);//Calc price total
 			return Object.assign({}, newState, action)
 
-
 		case DECREASE_QUANT_FROM_CART:
-			if (action.item != "") {
-
-				if (action.item.number == undefined)
-					action.item.number = 0;
-				
-				if (state.list.length > 0) {
-					if (state.list.length == 1 && state.list[0].id == action.item.id && state.list[0].number == 1) {
-						state.list.splice(0, 1);
-					}
-					else {
-						let equalBooksInCart = 0;
-						let indexForRemove = 0;
-						for (var i = 0, len = state.list.length; i < len; i++) {
-							if (state.list[i].id == action.item.id) {
-								equalBooksInCart = state.list[i].number;
-								equalBooksInCart -= 1;
-								indexForRemove = i;
-							}
-						}
-						if (equalBooksInCart == 0) {
-							state.list.splice(indexForRemove, 1);
-						}
-						else if (equalBooksInCart > 0) {
-							action.item.number = equalBooksInCart;
-							state.list.splice(indexForRemove,1);
-							state.list.push(action.item);
-						}
-					}	
-				}
-			}
+			newState = decreaseItemFromCart(newState, action);//Decrease Item number from list	
+			newState.total = calcTotal(newState.list);//Calc price total
 			return Object.assign({}, newState, action);
 
 

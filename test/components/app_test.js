@@ -1,14 +1,14 @@
 import { renderComponent , expect } from '../test_helper';
-import App from '../../src/components/app';
+import BtnAddToCart from '../../src/components/BtnAddToCart';
 
-describe('App' , () => {
+describe('BtnAddToCart' , () => {
   let component;
 
   beforeEach(() => {
-    component = renderComponent(App);
+    component = renderComponent(BtnAddToCart);
   });
 
-  it('renders something', () => {
-    expect(component).to.exist;
+  it('Should be possible to add item in the Cart', () => {
+	expect(component).to.exist;
   });
 });

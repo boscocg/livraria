@@ -23,22 +23,13 @@ export function updateCart(book,type) {
 
 	if (book == undefined)
 		book = "";
+	else {
+		if (book.number == undefined)
+			book.number = 1;
+	}
 
 	return { 
 		type: type,
 		item: book
-	}
-}
-
-
-export const TESTE_CART = 'TESTE_CART';
-
-export function testeCart(list) {
-
-	if (list == undefined)
-		list = {};
-
-	return (dispatch, getState) => {
-		dispatch({ type: TESTE_CART, payload: list })
 	}
 }

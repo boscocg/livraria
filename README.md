@@ -1,5 +1,16 @@
-Funcionalidades simples para um loja de Livros. Feito com React, Webpack, Babel e Redux
+Simple application for library store.
 
-> npm install
+> Webpack;
+> Babel;
+> React;
+> Redux;
 
+Plus:
+
+> Responsive CSS;
+> LESS
+
+To run:
+
+> npm install;
 > npm start

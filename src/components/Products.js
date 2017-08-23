@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { showBooks, updateCart } from '../actions';
-import BtnAddToCart from './BtnAddToCart.js';
+import Product from './Product.js';
 
 require('../assets/styles/components/Products.less');
 
@@ -15,23 +15,7 @@ class Products extends Component {
 	renderBooksList() {
 		return this.props.books.map((book) => {
 			return (
-				<div key={book.id} className="products__list__item">
-					<div className="products__list__item__image">
-						<img src={book.image} alt={book.title} />
-					</div>
-					<div className="products__list__item__title">
-						<h2>{book.title}</h2>
-					</div>
-					<div className="products__list__item__description">
-						<p>{book.description}</p>
-					</div>
-					<div className="products__list__item__price">
-						<p>R$ {book.price.toFixed(2)}</p>
-					</div>
-					<div className="products__list__item__btn">
-						<BtnAddToCart book={book}/>						
-					</div>
-				</div>
+				<Product key={book.id} book={book}/>
 			)
 		})
 	}
@@ -50,7 +34,7 @@ class Products extends Component {
 function mapStateToProps(state) {
 	return {
 		books: state.books.list,
-		cart: state.cart.list
+		cart: state.cart.list,
 	}
 }
 

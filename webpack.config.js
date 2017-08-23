@@ -1,9 +1,5 @@
-var debug = process.env.NODE_ENV !== "production";
-var webpack = require('webpack');
-
 module.exports = {
   context: __dirname,
-  devtool: debug ? "inline-sourcemap" : null,
   entry: [
     './src/index.js'
   ],
@@ -42,9 +38,6 @@ module.exports = {
     }
     ],
   },
-  plugins: debug ? [] : [
-    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
-  ],
   resolve: {
     extensions: ['', '.js', '.jsx']
   },

@@ -48,7 +48,6 @@ class Products extends Component {
 }
 
 function mapStateToProps(state) {
-	console.log("monitor",state)
 	return {
 		books: state.books.list,
 		cart: state.cart.list

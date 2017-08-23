@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { Router, Route, IndexRoute,hashHistory } from 'react-router';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import reducers from './reducers';
 import thunk from 'redux-thunk'
@@ -15,7 +15,7 @@ const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
     	<Route path="/" component={MasterApp}>
     		<IndexRoute component={Home} />
     		<Route path="/cart" component={CartPage} />

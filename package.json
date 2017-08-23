@@ -6,7 +6,6 @@
   "repository": "https://github.com/boscocg/livraria.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "start dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --open",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch",
     "build": "NODE_ENV=production node node_modules/.bin/webpack"

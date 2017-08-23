@@ -18,49 +18,27 @@ export const DECREASE_QUANT_FROM_CART = 'DECREASE_QUANT_FROM_CART';
 
 export function updateCart(book,type) {
 
-	if (type == "REMOVE_FROM_CART") {
-		if (book == undefined) {
-			return { 
-				type: REMOVE_FROM_CART,
-				item: ""
-			}
-		}
-		else {
-			return { 
-				type: REMOVE_FROM_CART,
-				item: book
-			}
-		}		
+	if (type == undefined)
+		type = "UPDATE_CART";
+
+	if (book == undefined)
+		book = "";
+
+	return { 
+		type: type,
+		item: book
 	}
-	else if (type == "DECREASE_QUANT_FROM_CART") {
-		if (book == undefined) {
-			return { 
-				type: DECREASE_QUANT_FROM_CART,
-				item: ""
-			}
-		}
-		else {
-			return { 
-				type: DECREASE_QUANT_FROM_CART,
-				item: book
-			}
-		}		
-	}
-	else {
-		if (book == undefined) {
-			return { 
-				type: UPDATE_CART,
-				item: ""
-			}
-		}
-		else {
-			return { 
-				type: UPDATE_CART,
-				item: book
-			}
-		}		
-	}
+}
 
 
+export const TESTE_CART = 'TESTE_CART';
 
+export function testeCart(list) {
+
+	if (list == undefined)
+		list = {};
+
+	return (dispatch, getState) => {
+		dispatch({ type: TESTE_CART, payload: list })
+	}
 }

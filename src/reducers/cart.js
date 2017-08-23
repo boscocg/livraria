@@ -6,6 +6,9 @@ const initialState = {
 
 export function updateCart(state = initialState, action) {
 
+	const oldState = state;
+	console.log("oldState",oldState.list)
+
 	if (action.list == undefined)
 		action.list = []
 
@@ -50,7 +53,7 @@ export function updateCart(state = initialState, action) {
 
 	switch(action.type) {
 		case UPDATE_CART:
-			return Object.assign({}, state, {list: state.list})
+			return Object.assign({}, oldState, state.list)
 		default:
 			return state
 	}

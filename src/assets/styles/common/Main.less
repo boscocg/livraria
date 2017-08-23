@@ -1,0 +1,102 @@
+@import "Mixins.less";
+
+.app {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	height: 100%;
+	flex-direction: column;
+	
+	& .app__header {
+		display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+		flex-grow: 0;
+		-webkit-flex-grow: 0;
+		height: 70px;
+		background: @color1;
+		box-sizing: border-box;
+		box-shadow: rgba(0,0,0,0.8) 2px 0px 3px;
+		position: relative;
+
+		& .app__header__left {
+			height: 100%;
+			box-sizing:border-box;
+			padding:10px 20px;
+			flex-grow: 1;
+		}
+
+		& .app__header__right {
+			height: 100%;
+		    padding: 5px 10px;
+		    background: #072f60;
+		    box-sizing: border-box;
+		}
+	}
+
+	& .app__main {
+		flex-grow: 1;
+		background: #fff;
+		overflow: auto;
+		height:100%;
+		max-height: 100%;
+
+		& .page {
+			& .page__header-bar {
+				flex-grow: 0;
+				background: @color4;
+				height: 35px;
+				box-sizing: border-box;
+				text-align: center;
+				position: relative;
+				
+				& .page__header-bar__back-icon {
+					position: absolute;
+					left: 20px;					
+					display: -webkit-box;
+				    display: -ms-flexbox;
+				    display: flex;
+				    align-items: center;
+				    height: 100%;
+
+					& span {
+						color: #ccc;
+						float: left;
+						display: inline-block;
+						text-transform: uppercase;
+						letter-spacing: -1px;
+						font-weight: bold;
+						margin-left: 5px;
+						font-size: 14px;
+						text-shadow: inset rgba(0,0,0,0.8) 1px 1px 1px;
+					}
+
+					& img {
+						width: 15px;
+						float: left
+					}
+				}
+				
+				& .page__header-bar__title {
+					margin: 7px 20px;
+					color: #ccc;
+					display: inline-block;
+				}
+			}
+		}
+		
+	}
+
+	& .app__footer {
+		flex-grow: 0;
+		height: 50px;
+		background: #eee;
+		text-align: center;
+
+		& p {
+			display: inline-block;
+			margin: 15px auto;
+			color: #999;
+		}
+	}
+}

@@ -1,17 +1,10 @@
-Simple application for library store.
+Simple application for bookstore.
 
-> Webpack;
-> Babel;
-> React;
-> Redux;
-> Axios;
+> Webpack, Babel, React, Redux, Axios
 
 Plus:
-
-> Responsive CSS;
-> LESS
+> Responsive CSS, LESS
 
 To run:
-
-> npm install;
-> npm start
+-npm install
+-npm start

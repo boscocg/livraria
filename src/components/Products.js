@@ -26,7 +26,7 @@ class Products extends Component {
 						<p>{book.description}</p>
 					</div>
 					<div className="products__list__item__price">
-						<p>R$ {book.price}</p>
+						<p>R$ {book.price.toFixed(2)}</p>
 					</div>
 					<div className="products__list__item__btn">
 						<BtnAddToCart book={book}/>						

@@ -11,7 +11,7 @@ class BtnAddToCart extends Component {
 	}
 
 	addToCart(book) {
-		this.props.updateCart(book);
+		this.props.updateCart(book,"UPDATE_CART");
 	}
 
 	verifyInCart(book) {

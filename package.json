@@ -44,6 +44,7 @@
     "react-redux": "4.3.0",
     "react-router": "^2.8.1",
     "redux": "^3.0.4",
+    "redux-localstorage": "^0.4.1",
     "redux-thunk": "^2.2.0"
   }
 }

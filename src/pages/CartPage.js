@@ -14,7 +14,6 @@ export default class CartPage extends React.Component {
 			      	<h1 className="page__header-bar__title">Carrinho</h1>
 		      	</div>
 		      	<div className="page__content">
-			      	<Link to="/">Home</Link>
 					<Cart />
 		      	</div>
 	      	</div> 

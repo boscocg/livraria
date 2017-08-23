@@ -33,7 +33,7 @@
 		border-collapse: collapse;
 
 		& caption {
-			opacity: 0;
+			display: none;
 		}
 
 		& td, & th {
@@ -94,3 +94,11 @@
 	}
 }
 
+@media (max-width:768px) {
+	.price {
+		width:70px!important;
+	}
+	.quantity {
+		width:60px!important;
+	}
+}

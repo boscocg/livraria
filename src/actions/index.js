@@ -12,14 +12,15 @@ export function showBooks() {
 }
 
 
-export const UPDATE_CART = 'UPDATE_CART';
+export const ADD_TO_CART = 'ADD_TO_CART';
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+export const INCREASE_QUANT_IN_CART = 'INCREASE_QUANT_IN_CART';
 export const DECREASE_QUANT_FROM_CART = 'DECREASE_QUANT_FROM_CART';
 
 export function updateCart(book,type) {
 
 	if (type == undefined)
-		type = "UPDATE_CART";
+		type = "ADD_TO_CART";
 
 	if (book == undefined)
 		book = "";

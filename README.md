@@ -4,6 +4,7 @@ Simple application for library store.
 > Babel;
 > React;
 > Redux;
+> Axios;
 
 Plus:
 

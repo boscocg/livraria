@@ -1,11 +1,11 @@
 import { renderComponent , expect } from '../test_helper';
-import BtnAddToCart from '../../src/components/BtnAddToCart';
+import Product from '../../src/components/Product';
 
-describe('BtnAddToCart' , () => {
+describe('Product' , () => {
   let component;
 
   beforeEach(() => {
-    component = renderComponent(BtnAddToCart);
+    component = renderComponent(Product);
   });
 
   it('Should be possible to add item in the Cart', () => {

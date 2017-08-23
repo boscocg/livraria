@@ -13,7 +13,7 @@ class Product extends Component {
 	}
 
 	addToCart(book) {		
-		this.props.updateCart(book,"UPDATE_CART");
+		this.props.updateCart(book,"ADD_TO_CART");
 		this.refresh();
 	}
 

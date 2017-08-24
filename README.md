@@ -6,4 +6,4 @@ Plus:
 > Responsive CSS, LESS
 
 To run:
-> npm install; npm start
+> npm install; npm start; localhost:8080

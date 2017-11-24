@@ -12,10 +12,10 @@ class IconCart extends Component {
 	}
 
 	numberItems() {
-		if (this.props.cart.length > 0) {
+		if (this.props.cart.list.length > 0) {
 			return (
-				<span>{ this.props.cart.length }</span>
-			)	
+				<span>{ this.props.cart.list.length }</span>
+			)
 		}
 	}
 
@@ -27,12 +27,12 @@ class IconCart extends Component {
 	  		</Link>
 	    );
   	}
-  	
+
 }
 
 function mapStateToProps(state) {
 	return {
-		cart: state.cart.list
+		cart: state.cart
 	}
 }
 

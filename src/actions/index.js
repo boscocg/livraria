@@ -1,4 +1,5 @@
 import axios from 'axios';
+export * from './addToCart';
 
 export const SHOW_BOOKS = 'SHOW_BOOKS';
 
@@ -11,13 +12,11 @@ export function showBooks() {
 	}
 }
 
-
-export const ADD_TO_CART = 'ADD_TO_CART';
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 export const INCREASE_QUANT_IN_CART = 'INCREASE_QUANT_IN_CART';
 export const DECREASE_QUANT_FROM_CART = 'DECREASE_QUANT_FROM_CART';
 
-export function updateCart(book,type) {
+export function updateCart(book, type) {
 
 	if (type == undefined)
 		type = "ADD_TO_CART";
@@ -29,7 +28,7 @@ export function updateCart(book,type) {
 			book.number = 1;
 	}
 
-	return { 
+	return {
 		type: type,
 		item: book
 	}

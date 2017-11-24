@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { updateCart } from '../actions';
+import { addToCart } from '../actions';
 import { browserHistory } from 'react-router';
 import { createStore, applyMiddleware } from 'redux';
 
@@ -8,19 +8,8 @@ require('../assets/styles/components/Product.less');
 
 class Product extends Component {
 
-	componentWillMount() {
-		this.props.updateCart();
-	}
-
-	addToCart(book) {		
-		this.props.updateCart(book,"ADD_TO_CART");
-		this.refresh();
-	}
-
-	refresh(){
-		let page;
-		browserHistory.listen(function(event) { page = event })
-	    browserHistory.push(page);
+	addToCart(book) {
+		this.props.addToCart(book);
 	}
 
 	renderButton(book) {
@@ -28,7 +17,7 @@ class Product extends Component {
 			if (this.props.cart[i].id == book.id)
 				return (<a className="btn btn-disabled added">Adicionado</a>)
 		}
-		return (<a className="btn add" onClick={this.addToCart.bind(this,this.props.book)}>Adicionar ao carrinho</a>)	
+		return (<a className="btn add" onClick={this.addToCart.bind(this,this.props.book)}>Adicionar ao carrinho</a>)
 	}
 
 	render() {
@@ -47,7 +36,7 @@ class Product extends Component {
 					<p>R$ {this.props.book.price.toFixed(2)}</p>
 				</div>
 				<div className="product__btn">
-					{ this.renderButton(this.props.book) }						
+					{ this.renderButton(this.props.book) }
 				</div>
 			</div>
 	    );
@@ -60,4 +49,4 @@ function mapStateToProps(state) {
 	}
 }
 
-export default connect(mapStateToProps, { updateCart })(Product)
+export default connect(mapStateToProps, { addToCart })(Product)

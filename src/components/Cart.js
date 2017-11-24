@@ -11,25 +11,16 @@ class Cart extends Component {
 		this.props.updateCart();
 	}
 
-	refresh(){
-		let page;
-		browserHistory.listen(function(event) { page = event })
-	    browserHistory.push(page);
-	}
-
 	increaseItemInCart(book) {
 		this.props.updateCart(book,"INCREASE_QUANT_IN_CART");
-		this.refresh();
 	}
 
 	removeItemFromCart(book) {
 		this.props.updateCart(book,"REMOVE_FROM_CART");
-		this.refresh();
 	}
 
 	decreaseItemFromCart(book) {
 		this.props.updateCart(book,"DECREASE_QUANT_FROM_CART");
-		this.refresh();
 	}
 
 	renderCartList() {
@@ -40,7 +31,7 @@ class Cart extends Component {
 					<td className="quantity">
 						<a title="Remover 1" onClick={() => this.decreaseItemFromCart(item)}><img src={require('../assets/images/minus.svg')} alt="Remover 1"/></a>
 						<span>{item.number}</span>
-						<a title="Adicionar mais 1" onClick={() => this.increaseItemInCart(item)}><img src={require('../assets/images/plus.svg')} alt="Adicionar mais 1"/></a> 
+						<a title="Adicionar mais 1" onClick={() => this.increaseItemInCart(item)}><img src={require('../assets/images/plus.svg')} alt="Adicionar mais 1"/></a>
 					</td>
 					<td className="price">R$ {(item.price * item.number).toFixed(2)}</td>
 					<td className="remove"><a onClick={() => this.removeItemFromCart(item)} title="Remover produto"><img src={require('../assets/images/remove.svg')} alt="Remover produto"/></a></td>

@@ -1,0 +1,44 @@
+_id: req_672d6da3ca494449912915ec793daf3a
+type: Request
+parentId: fld_9ca9b97739574965a27b6b8c8af07950
+modified: 1689690944603
+created: 1677248721022
+url: "{{ _.base_url }}"
+name: createCredential
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"mutation
+    {\n  createCredential(createCredentialInput:{\n    title: \"Valid Person
+    Credential Test 2\",\n    description: \"A valid person
+    credential\",\n    recipientUserGatewayIdOrWallet:
+    \"joaozinho2\"\n    dataModelId:
+    \"3e75f99b-7160-4190-b232-df71e30100fa\"\n\t\timage:
+    \"https://arweave.net/p_uEW7Ledg0-e4Fh2dOexqHJbau0MjO2u0EVCfbA0UI\",\n    expirationDate:
+    null,\n    tags:[],\n    claim: {\n      taskNumber: 2,\n\t\t\tearnId:
+    \"12121\",\n\t\t\ttasks: [\"asdfasdf\"]\n    }\n  }) {\n    id\n  }\n}"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_d257e93b5fa0441ca53f51717e9f7946
+  - id: pair_42cca8b3226d4c1890fb0005a6ac8dbc
+    name: x-api-key
+    value: "{{ _.api_key }}"
+    description: ""
+  - id: pair_9e7a14999d9e44eca578732aa0181ce8
+    name: ""
+    value: ""
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689690884354
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

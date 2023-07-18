@@ -1,0 +1,29 @@
+_id: req_2b74702db3724cb983a3370cef05e178
+type: Request
+parentId: fld_a8c471a087df495594f957d8b14c4892
+modified: 1689690863686
+created: 1677699188223
+url: "{{ _.base_url }}"
+name: createWalletNonce
+description: https://etherscan.io/verifiedSignatures#
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"mutation {\n  createWalletNonce(input: { wallet:
+    \"0x0fA5f1Ff1cB364d0899F00f65D6b07eEe93dde78\"}) {\n    message\n  }\n}\n"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: ""
+  disabled: true
+metaSortKey: -1689690852541
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

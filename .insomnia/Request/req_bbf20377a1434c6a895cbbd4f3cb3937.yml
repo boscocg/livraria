@@ -1,0 +1,44 @@
+_id: req_bbf20377a1434c6a895cbbd4f3cb3937
+type: Request
+parentId: fld_9ca9b97739574965a27b6b8c8af07950
+modified: 1689690897827
+created: 1677249033369
+url: "{{ _.base_url }}"
+name: credential
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"query {\n  credential(id:
+    \"af13ca0c-9a96-48f5-bb22-5636cf226bd0\")
+    {\n    id\n    title\n    description\n    image\n    expirationDate\n    status\n    tags\n    claim\n    arweaveInfo\n\n    activities
+    {\n      newStatus\n      oldStatus\n      type\n      oldUrl\n      newUrl\n      timestamp\n      credential
+    {\n        id\n      }\n    }\n\n    claimArray
+    {\n      description\n      type\n      property\n      label\n      value\n      metadata\n    }\n\n    issuerUser
+    {\n      gatewayId\n      primaryWallet
+    {\n        address\n      }\n    }\n\n    recipientUser
+    {\n      gatewayId\n      primaryWallet
+    {\n        address\n      }\n    }\n\n    dataModel
+    {\n      id\n      title\n      tags\n      schema\n      arweaveInfo\n      createdAt\n    }\n\n    activities
+    {\n      type\n      oldStatus\n      newStatus\n      txHash\n      timestamp\n    }\n\t\t\n\t\tnft
+    {\n\t\t\tchain\n\t\t\ttxHash\n\t\t\tminted\n\t\t}\n\n    createdAt\n    updatedAt\n  }\n}"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_c54bcedbf1a54fccb66d693f46132de5
+  - id: pair_1b6f37519efa4e9b8be2ad4427d83d4a
+    name: x-api-key
+    value: "{{ _.api_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689690884554
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

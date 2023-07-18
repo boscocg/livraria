@@ -1,0 +1,35 @@
+_id: req_9a05281e614242eb967f09b1bcd7fb3e
+type: Request
+parentId: fld_a8c471a087df495594f957d8b14c4892
+modified: 1689690867936
+created: 1688508868694
+url: "{{ _.base_url }}"
+name: addEmailConfirmation
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"mutation addEmailConfirmation {\n  addEmailConfirmation(input:
+    {\n    code: 954335,\n    email: \"joaobosco@mygateway.xyz\"\n  })
+    {\n    user {\n      authentications
+    {\n        id\n        data\n      }\n    }\n  }\n}","operationName":"addEmailConfirmation"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_c54bcedbf1a54fccb66d693f46132de5
+  - id: pair_1b6f37519efa4e9b8be2ad4427d83d4a
+    name: x-api-key
+    value: "{{ _.api_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689690852441
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

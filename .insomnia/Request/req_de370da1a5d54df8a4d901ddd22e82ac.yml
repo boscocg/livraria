@@ -1,0 +1,36 @@
+_id: req_de370da1a5d54df8a4d901ddd22e82ac
+type: Request
+parentId: fld_a8c471a087df495594f957d8b14c4892
+modified: 1689690866007
+created: 1688654475736
+url: "{{ _.base_url }}"
+name: addWalletConfirmation
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"mutation addWallet {\n\t\taddWalletConfirmation(\n\t\t\tinput:
+    {\n\t\t\t\tsignature:
+    \"0x71e74c824050d07cc25fc94e2fd8c956f4474ba7c28df477d997c1051c54bd565f62cf16a3617ef0492f997732670d46e8a468b6e0fc2b98266a332166db7b471c\",\n\t\t\t\twallet:
+    \"0x0fA5f1Ff1cB364d0899F00f65D6b07eEe93dde78\"}\n\t\t)
+    {\n      email\n    }\n}\n","operationName":"addWallet"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_c54bcedbf1a54fccb66d693f46132de5
+  - id: pair_1b6f37519efa4e9b8be2ad4427d83d4a
+    name: x-api-key
+    value: "{{ _.api_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689690852491
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

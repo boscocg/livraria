@@ -1,0 +1,33 @@
+_id: req_db900bd261dc42e290cfa9250fd9d5ed
+type: Request
+parentId: fld_9ca9b97739574965a27b6b8c8af07950
+modified: 1689690905367
+created: 1677248916011
+url: "{{ _.base_url }}"
+name: revokeCredential
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"mutation {\n  revokeCredential(id:
+    \"7054acc6-6088-4ef9-889a-ab8c45e36e97\") {\n    status\n  }\n}"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_089adab01f9a4c5887521d61cd8972b4
+  - id: pair_3caff8bdb907469b81d94e2ca34c8510
+    name: x-api-key
+    value: "{{ _.api_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689690884454
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

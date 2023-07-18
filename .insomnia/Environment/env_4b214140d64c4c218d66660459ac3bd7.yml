@@ -1,0 +1,18 @@
+_id: env_4b214140d64c4c218d66660459ac3bd7
+type: Environment
+parentId: env_55383eac9ed465bf71f44db5dacaef497b611c04
+modified: 1689692624510
+created: 1687789324876
+name: Develop
+data:
+  base_url: https://develop.protocol.mygateway.xyz/v1/graphql
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm90b2NvbF9pZCI6IjQwYjU4NmQyLTg1MGYtNDJhNi04MTdlLTJlNDZlNGE5MDBkYSIsImhhc3VyYV9pZCI6IjY0MmIzNTNjLWZmMzctNDgwNC1iY2IyLTM0MWU2ODRlZjU3OCIsIndhbGxldCI6IjB4NDA4REJjRjA1Yzk1NzQ4NEY1NjU1MERhMTQ1QzNlZTVlNEEzMUJlQyIsImh0dHBzOi8vaGFzdXJhLmlvL2p3dC9jbGFpbXMiOnsieC1oYXN1cmEtYWxsb3dlZC1yb2xlcyI6WyJ1c2VyIl0sIngtaGFzdXJhLWRlZmF1bHQtcm9sZSI6InVzZXIiLCJ4LWhhc3VyYS11c2VyLWlkIjoiNjQyYjM1M2MtZmYzNy00ODA0LWJjYjItMzQxZTY4NGVmNTc4In0sInR5cGUiOiJhdXRoX3Rva2VuIiwiaWF0IjoxNjg4NDk4MDM5fQ.28XhpSzXfNcwTx_8h_Vxgux5aDW14O1WT_VwcCmp4Zc
+  api_key: f9p_9z3V3WZfv3IT_fnFTSXBxlAmhhz-
+dataPropertyOrder:
+  "&":
+    - base_url
+    - token
+    - api_key
+color: null
+isPrivate: false
+metaSortKey: 1684515113722

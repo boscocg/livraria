@@ -1,0 +1,36 @@
+_id: req_f6d607f719274bbc84735d5175bac32b
+type: Request
+parentId: fld_9ca9b97739574965a27b6b8c8af07950
+modified: 1689690891763
+created: 1677249018343
+url: "{{ _.base_url }}"
+name: dataModel
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"query {\n  dataModel(id:
+    \"3e75f99b-7160-4190-b232-df71e30100fa\")
+    {\n    id\n    description\n    schema\n    tags\n    title\n    createdAt\n\t\tallowedUsers
+    {\n\t\t\tid\n\t\t}\n\t\tallowedOrganizations
+    {\n\t\t\tid\n\t\t}\n\t\tpermissioning\n  }\n}"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_6c1f4cd4d32c4ae1b8774a3ba5ec9f29
+  - id: pair_5a8974c89ee84960a14227d8ba5bfa3b
+    name: x-api-key
+    value: "{{ _.api_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689690884654
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

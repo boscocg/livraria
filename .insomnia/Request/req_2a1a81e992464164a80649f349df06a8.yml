@@ -1,0 +1,31 @@
+_id: req_2a1a81e992464164a80649f349df06a8
+type: Request
+parentId: fld_a8c471a087df495594f957d8b14c4892
+modified: 1689690872526
+created: 1677699223065
+url: "{{ _.base_url }}"
+name: login
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"mutation {\n  login(input: { signature:
+    \"0xc4220c0b677d7ab10a814a4f1242ba585f793d44fd92c649625674633e13272740c3c0181548003fe75c4b4bce358fcc03f2cf6999fbd37c52594538aa71cae61c\",
+    wallet: \"0xC8FE70890d445B3099441f5a04dFe9CF1935200e\" })
+    {\n    token\n  }\n}\n","operationName":"credentials"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: ""
+  disabled: true
+metaSortKey: -1689690852341
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

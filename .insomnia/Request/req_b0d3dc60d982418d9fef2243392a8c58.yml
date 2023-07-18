@@ -1,0 +1,46 @@
+_id: req_b0d3dc60d982418d9fef2243392a8c58
+type: Request
+parentId: fld_9ca9b97739574965a27b6b8c8af07950
+modified: 1689690908505
+created: 1677248816464
+url: "{{ _.base_url }}"
+name: createDataModel
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"mutation {\n  createDataModel(\n    createDataModelInput:
+    {\n      title: \"Default JB 2\"\n      description:
+    \"\"\n      permissioning: ALL\n      tags: [\"Earn\", \"Marketing\",
+    \"Education\"]\n\t\t\tconsumptionPrice: 20.85\n      schema:
+    {\n        type: \"object\"\n        default: {}\n        title: \"Root
+    Schema\"\n        required: [\"taskNumber\", \"earnId\",
+    \"tasks\"]\n        properties: {\n          taskNumber:
+    {\n            type: \"integer\"\n            default: 0\n            title:
+    \"Number of Completed Tasks\"\n            examples:
+    [2]\n          }\n        }\n      }\n    }\n  )
+    {\n    id\n    title\n  }\n}"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_3d6a8002ad454169a38aee1b867c1b72
+  - id: pair_2c5d02a7a59f4502b0d40efae81db797
+    name: x-api-key
+    value: "{{ _.api_key }}"
+    description: ""
+  - id: pair_c74297ef919a46169089aa174733db39
+    name: ""
+    value: ""
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689690884404
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

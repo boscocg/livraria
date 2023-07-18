@@ -1,0 +1,36 @@
+_id: req_60b8ab601d7f49d797d0310d6bee6796
+type: Request
+parentId: fld_9ca9b97739574965a27b6b8c8af07950
+modified: 1689690946934
+created: 1677248587353
+url: "{{ _.base_url }}"
+name: createOrganization
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"mutation createOrganization
+    {\n  createOrganization(\n    createOrganizationInput: {\n      username:
+    \"jbc_org\"\n      name: \"JBC Labs\"\n      description: \"Joao
+    Conserva\"\n      signers: []\n    }\n  )
+    {\n    id\n    gatewayId\n  }\n}","operationName":"createOrganization"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_50aaeedcb5d048a5bdd002cc66bfc40e
+  - id: pair_810ec577b63b446094053efd37876aa6
+    name: x-api-key
+    value: "{{ _.api_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689690884304
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

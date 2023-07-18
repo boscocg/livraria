@@ -1,0 +1,32 @@
+_id: req_7921ab000801499e897d897a954ee44f
+type: Request
+parentId: fld_9ca9b97739574965a27b6b8c8af07950
+modified: 1689690895104
+created: 1689628612139
+url: "{{ _.base_url }}"
+name: organizations
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"query {\n  organizations {\n    id\n    gatewayId\n  }\n}"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_86281dbe1f35430a821bb51e1a3ef487
+  - id: pair_f5f1f91982e94d8ab8322d51699102dc
+    name: x-api-key
+    value: "{{ _.api_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689690884604
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,18 @@
+_id: env_a70247774e3d47e0a990001993cb66b6
+type: Environment
+parentId: env_55383eac9ed465bf71f44db5dacaef497b611c04
+modified: 1689690812590
+created: 1684515113673
+name: Local
+data:
+  base_url: http://localhost:3000/v1/graphql
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm90b2NvbF9pZCI6Ijk4ZDRhNWViLWE5YTgtNGNhZC05MDBiLWRjMDEwNDg2OThkMiIsImhhc3VyYV9pZCI6IjI4MDRlOGJjLTc4YTMtNDBiYi05YWI1LWU2YjkwNDBkNjUzNiIsImF1dGgiOnsiaWQiOiJlYWE3MDQ4YS0xM2RiLTQ5NTktYmMwMC1mZjcwNzU1ZTc2OWMiLCJ0eXBlIjoiV0FMTEVUIn0sImh0dHBzOi8vaGFzdXJhLmlvL2p3dC9jbGFpbXMiOnsieC1oYXN1cmEtYWxsb3dlZC1yb2xlcyI6WyJ1c2VyIl0sIngtaGFzdXJhLWRlZmF1bHQtcm9sZSI6InVzZXIiLCJ4LWhhc3VyYS11c2VyLWlkIjoiMjgwNGU4YmMtNzhhMy00MGJiLTlhYjUtZTZiOTA0MGQ2NTM2In0sInR5cGUiOiJhdXRoX3Rva2VuIiwiaWF0IjoxNjg5MTAyMDE4fQ.qjVCKLY7DovdYZt0NRsvsJez49WgyMWzIn02BHxIULE
+  api_key: local
+dataPropertyOrder:
+  "&":
+    - base_url
+    - token
+    - api_key
+color: null
+isPrivate: false
+metaSortKey: 1684515113673

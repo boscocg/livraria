@@ -1,0 +1,32 @@
+_id: req_0fea6c2b83ae4150a97d6e29bdfa6c7e
+type: Request
+parentId: fld_62f811732bca43aeb0e403dc80ff0751
+modified: 1689692320289
+created: 1688154129074
+url: "{{ _.base_url }}"
+name: me
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"query {\n\tme {\n\t\tid\n\t}\n}"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_9a968555eb2f4e4cbccddef0376c10fa
+  - id: pair_465ebc7fe7274061b3e5709d76e67ac4
+    name: x-api-key
+    value: "{{ _.api_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689692313258
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

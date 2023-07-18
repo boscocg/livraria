@@ -1,0 +1,18 @@
+_id: env_f66b0e1b4334494ea9a6b0a368b21920
+type: Environment
+parentId: env_55383eac9ed465bf71f44db5dacaef497b611c04
+modified: 1687789364552
+created: 1685021141422
+name: Staging
+data:
+  base_url: https://staging.protocol.mygateway.xyz/v1/graphql
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm90b2NvbF9pZCI6IjQ5ZmRhMDEzLWUyYTItNDI2Yi05MTc4LTU1YjIwMzE4YjQ4NSIsImhhc3VyYV9pZCI6IjExZWQwNzM1LTQ2ODctNDk0My1hNjg2LTNhZjcyNzU2NGQxZiIsIndhbGxldCI6IjB4QzhGRTcwODkwZDQ0NUIzMDk5NDQxZjVhMDRkRmU5Q0YxOTM1MjAwZSIsImh0dHBzOi8vaGFzdXJhLmlvL2p3dC9jbGFpbXMiOnsieC1oYXN1cmEtYWxsb3dlZC1yb2xlcyI6WyJ1c2VyIl0sIngtaGFzdXJhLWRlZmF1bHQtcm9sZSI6InVzZXIiLCJ4LWhhc3VyYS11c2VyLWlkIjoiMTFlZDA3MzUtNDY4Ny00OTQzLWE2ODYtM2FmNzI3NTY0ZDFmIn0sInR5cGUiOiJhdXRoX3Rva2VuIiwiaWF0IjoxNjg0NzYyNDc4fQ.CjJHQeyRkTqNhhLyfaU6M_GOtQ0zE8yXe54k323jvzs
+  api_key: f9p_9z3V3WZfv3IT_fnFTSXBxlAmhhz-
+dataPropertyOrder:
+  "&":
+    - base_url
+    - token
+    - api_key
+color: null
+isPrivate: false
+metaSortKey: 1684515113723

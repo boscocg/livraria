@@ -1,0 +1,35 @@
+_id: req_7854c575f5954fda89fe925a0429c47b
+type: Request
+parentId: fld_9ca9b97739574965a27b6b8c8af07950
+modified: 1689690900022
+created: 1677249049652
+url: "{{ _.base_url }}"
+name: credentials
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"query credentials {\n  credentials
+    {\n    id\n    createdAt\n    image\n    activities
+    {\n      timestamp\n      credential
+    {\n        id\n      }\n    }\n  }\n}","operationName":"credentials"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_9a968555eb2f4e4cbccddef0376c10fa
+  - id: pair_465ebc7fe7274061b3e5709d76e67ac4
+    name: x-api-key
+    value: "{{ _.api_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689690884504
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
